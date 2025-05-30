@@ -79,17 +79,18 @@ def test_time_tools():
         print(f"Error: {result.get('message', 'Unknown error')}")
     
     # Test timezone info
-    print("\n2. Timezone Info for Sydney:")
-    result = get_timezone_info("Sydney")
+    print("\n2. Timezone Info for Australia/Sydney:")
+    result = get_timezone_info("Australia/Sydney")
     print(f"Status: {result['status']}")
     if result['status'] == "success":
         print(f"Message: {result.get('message', 'N/A')}")
         if 'data' in result:
             data = result['data']
-            print(f"City: {data.get('city', 'N/A')}")
-            print(f"Timezone: {data.get('timezone_name', 'N/A')}")
+            print(f"Timezone: {data.get('timezone', 'N/A')}")
+            print(f"Current Time: {data.get('current_time', 'N/A')}")
             print(f"UTC Offset: {data.get('utc_offset', 'N/A')}")
-            print(f"DST Active: {data.get('dst_active', 'N/A')}")
+            print(f"DST Active: {data.get('is_dst', 'N/A')}")
+            print(f"Abbreviation: {data.get('abbreviation', 'N/A')}")
     else:
         print(f"Error: {result.get('message', 'Unknown error')}")
 
@@ -123,10 +124,10 @@ def test_location_tools():
     if result['status'] == "success":
         print(f"Message: {result.get('message', 'N/A')}")
         if 'data' in result:
-            cities = result['data'].get('cities', [])
+            cities = result['data'].get('results', [])
             print(f"Found {len(cities)} cities")
             for city in cities[:3]:  # Show first 3
-                print(f"  - {city}")
+                print(f"  - {city['name']}, {city['country']} (Pop: {city['population']:,})")
     else:
         print(f"Error: {result.get('message', 'Unknown error')}")
 
