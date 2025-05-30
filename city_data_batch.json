@@ -1,0 +1,72 @@
+[
+  {
+    "city": "New York",
+    "timestamp": "2025-05-30T15:56:41.350561",
+    "weather": {
+      "temperature_celsius": 22.0,
+      "description": "Partly Cloudy"
+    },
+    "local_time": "2025-05-30T03:56:41.350577-04:00",
+    "population": 8336817,
+    "famous_for": [
+      "Statue of Liberty",
+      "Central Park"
+    ]
+  },
+  {
+    "city": "London",
+    "timestamp": "2025-05-30T15:56:41.350596",
+    "weather": {
+      "temperature_celsius": 15.0,
+      "description": "Rainy"
+    },
+    "local_time": "2025-05-30T08:56:41.350608+01:00",
+    "population": 9648110,
+    "famous_for": [
+      "Big Ben",
+      "Tower Bridge"
+    ]
+  },
+  {
+    "city": "Tokyo",
+    "timestamp": "2025-05-30T15:56:41.350624",
+    "weather": {
+      "temperature_celsius": 28.0,
+      "description": "Sunny"
+    },
+    "local_time": "2025-05-30T16:56:41.350634+09:00",
+    "population": 14047594,
+    "famous_for": [
+      "Tokyo Skytree",
+      "Senso-ji Temple"
+    ]
+  },
+  {
+    "city": "Paris",
+    "timestamp": "2025-05-30T15:56:41.350649",
+    "weather": {
+      "temperature_celsius": 18.0,
+      "description": "Cloudy"
+    },
+    "local_time": "2025-05-30T09:56:41.350840+02:00",
+    "population": 2161000,
+    "famous_for": [
+      "Eiffel Tower",
+      "Louvre Museum"
+    ]
+  },
+  {
+    "city": "Sydney",
+    "timestamp": "2025-05-30T15:56:41.350880",
+    "weather": {
+      "temperature_celsius": 25.0,
+      "description": "Clear"
+    },
+    "local_time": "2025-05-30T17:56:41.350896+10:00",
+    "population": 5312163,
+    "famous_for": [
+      "Sydney Opera House",
+      "Harbour Bridge"
+    ]
+  }
+]
