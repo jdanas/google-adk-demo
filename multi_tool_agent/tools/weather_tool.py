@@ -203,7 +203,7 @@ def get_weather_forecast(city: str, days: int = 5) -> Dict[str, Any]:
             data={
                 "city": city_name,
                 "country": country,
-                "forecasts": forecasts
+                "forecast_days": forecasts
             },
             message=f"{days}-day weather forecast for {city_name} (OpenMeteo API)"
         ).dict()
