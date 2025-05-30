@@ -57,7 +57,11 @@ def demo_time_tools():
         time_info = get_current_time_enhanced(city)
         if time_info["status"] == "success":
             data = time_info["data"]
-            current_time = datetime.fromisoformat(data["current_time"])
+            # Handle datetime object or string
+            if isinstance(data["current_time"], str):
+                current_time = datetime.fromisoformat(data["current_time"])
+            else:
+                current_time = data["current_time"]
             print(f"📍 {data['city']}: {current_time.strftime('%H:%M')} ({data['utc_offset']})")
         else:
             print(f"📍 {city}: {time_info['message']}")
@@ -109,7 +113,12 @@ def demo_batch_processing():
         # Get time
         time_info = get_current_time_enhanced(city)
         if time_info["status"] == "success":
-            city_data["local_time"] = time_info["data"]["current_time"]
+            time_data = time_info["data"]["current_time"]
+            # Convert datetime object to string if needed
+            if hasattr(time_data, 'isoformat'):
+                city_data["local_time"] = time_data.isoformat()
+            else:
+                city_data["local_time"] = time_data
         
         # Get city info
         info = get_city_info(city)
