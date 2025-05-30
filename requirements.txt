@@ -1,0 +1,6 @@
+google-adk
+requests
+python-dotenv
+pydantic
+pytest
+pytest-asyncio
